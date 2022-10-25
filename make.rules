@@ -33,7 +33,7 @@ benchX86: bench.c pre_req
 	${CC_X86} ${CFLAGS} -DMAGIC bench.c --static --std=c99  -lm -o bench.X86
 
 benchARM: bench.c pre_req
-	${CC_ARM} ${CFLAGS} bench.c --static --std=c99 -lm -o bench.ARM
+	${CC_ARM} ${CFLAGS} bench.c  --std=gnu99 -lm -o bench.ARM
 
 benchRISCV: bench.c pre_req
 	${CC_RISCV} ${CFLAGS} bench.c --static --std=c99 -lm -o bench.RISCV
